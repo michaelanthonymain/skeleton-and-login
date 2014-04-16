@@ -1,0 +1,11 @@
+.container {
+  margin: 80px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted rgb(128,179,255);
+}
+
+th {
+  text-align: left;
+}
+
