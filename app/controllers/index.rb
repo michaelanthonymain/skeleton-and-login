@@ -4,10 +4,11 @@ get '/' do
 end
 
 post '/login' do
-  @user = User.where(params[:email]).first
+  @user = User.where(email: params[:email]).first
   if @user.authenticate(params[:password])
     session[:user_id] = @user.id
   end
+  erb :'/users/show'
 end
 
 #logout

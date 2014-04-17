@@ -8,7 +8,7 @@ post '/users' do
     if @user.save!
       @user = User.last
       session[:user_id] = @user.id
-      erb :'/users/:id'
+      erb :'/users/show'
     else
       redirect '/'
     end
@@ -28,13 +28,7 @@ post '/users/:id' do
     User.update(params[:user])
 end
 
-post '/logout' do
-  session.clear
-  redirect '/'
-end
-
 #delete
-
 post '/users/:id/delete' do
   user_to_delete = User.find(params[:id])
   user_to_delete.destroy

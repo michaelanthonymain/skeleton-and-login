@@ -1,0 +1,8 @@
+<div class="container">
+  <% @this_user = User.find(session[:user_id]) %>
+
+  <h1>Hello, <%=@this_user.name%></h1>
+
+  <a href='/logout'>Logout</a>
+
+</div>
