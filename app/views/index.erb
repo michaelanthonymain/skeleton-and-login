@@ -1,2 +1,30 @@
 <div class="container">
+
+  <form id="user-login" action="/login" method="post">
+      <label for="email">Email:</label><br>
+      <input type="text" name="email"><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" name="password"><br>
+
+      <input class="login-button" type="submit" name= "submit" value="Login">
+  </form>
+
+  <form id="user-create" name="user-create" action="/users" method="post">
+    <label for="name" id="name-label">Username:</label><br>
+    <input type="text" name="user[name]" id="name" size="30" value="" class="text-input" /><br>
+
+    <label for="email" id="email-label">Email:</label><br>
+    <input type="email" name="user[email]" id="email" size="30" value="" class="text-input" /><br>
+
+    <label for="password" id="password-label">Password:</label><br>
+    <input type="password" name="user[password]" id="password" size="30" value="" class="text-input" /><br>
+
+    <label for="password-confirmation" id="password-confirmation-label">Confirm Your Password:</label><br>
+    <input type="password" name="user[password_confirmation]" id="password-confirmation" size="30" value="" class="text-input" /><br>
+
+      <br />
+    <input type="submit" name="submit" class="button" id="submit-btn" value="Register" />
+</form>
+
 </div>
